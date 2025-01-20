@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "9b21399b-3f5d-4ce2-a983-b98e9ba7520e",
+		"name": "TEDEPSA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40935142"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register?name=admin&email=admin@admin.com&password=admin123&password_confirmation=admin123&role=superuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "admin"
+						},
+						{
+							"key": "email",
+							"value": "admin@admin.com"
+						},
+						{
+							"key": "password",
+							"value": "admin123"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "admin123"
+						},
+						{
+							"key": "role",
+							"value": "superuser"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login?name=admin&password=admin123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "admin123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST TOKEN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MzcxMTIyODUsImV4cCI6MTczNzExNTg4NSwibmJmIjoxNzM3MTEyMjg1LCJqdGkiOiJ2d3NrVzR5bEQ4YWRKZkxoIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.l6VFRR_QHL78OPJ9SdiHuKLVXCIGZf81-TK4jTyjhQU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/auth/me"
+			},
+			"response": []
+		},
+		{
+			"name": "GET INGREDIENTES LIST",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE INGREDIENTE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ingredientes?nombre=Queso Gorgonzola&categoria=premium",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ingredientes"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Queso Gorgonzola"
+						},
+						{
+							"key": "categoria",
+							"value": "premium"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE INGREDIENTE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ingredientes/1?nombre=Peperoni&categoria=basico",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ingredientes",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "nombre",
+							"value": "Peperoni"
+						},
+						{
+							"key": "categoria",
+							"value": "basico"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PIZZA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MzcxMzY2NzEsImV4cCI6MTczNzE1ODI3MSwibmJmIjoxNzM3MTM2NjcxLCJqdGkiOiIxTlViUFlJQWdNMktRUlFzIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._qd2Zaq1wHtLMp_AkcdLjW9RfP__yQOAdBWLYG57J3s"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pizzas?estado=1&nombre=PIZZA MEH deluxe&precio=50000&ingredientes[0]=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pizzas"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "1"
+						},
+						{
+							"key": "nombre",
+							"value": "PIZZA MEH deluxe"
+						},
+						{
+							"key": "precio",
+							"value": "50000"
+						},
+						{
+							"key": "ingredientes[0]",
+							"value": "10"
+						},
+						{
+							"key": "ingredientes[1]",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PIZZAS LIST LOGUEADO",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET PIZZAS LIST SIN LOGUEARSE",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET PIZZA BY ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PIZZA",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE INGREDIENTE BY ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
