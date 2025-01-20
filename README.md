@@ -64,3 +64,7 @@ Para el proyecto se proporciona un dump.SQL para crear la base de datos inicial
 
 Se proporciona coleccion postman con ejemplos de las peticiones a la API 
 
+## Para el Punto (Endpoint para agregar/quitar ingredientes a una pizza.)
+
+Se hizo mediante la peticion PATCH, ya que el actualizado de datos es parcial. Atravez del metodo   actualizarIngredientes del PizzaController, se asume una actualizacion completa de ingredientes, previa verificacion de la existencia de los ingredientes proporcionados, con un array de IDs de ingredientes.
+
