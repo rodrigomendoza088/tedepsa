@@ -1,4 +1,4 @@
-# Prueba TEEPSA
+# Prueba TEDEPSA
 
 
 El proyecto trata de una API RESTful de una pizzeria
@@ -21,7 +21,7 @@ Clonar el proyecto
 Ir a la carpeta del proyecto
 
 ```bash
-  cd desafioIDESA
+  cd tedepsa
 ```
 
 Instalar dependencias
@@ -29,7 +29,7 @@ Instalar dependencias
 ```bash
   composer install
 ```
-Configurar nuestra coneccion a la base de datos en nuestro archivo .en
+Configurar nuestra coneccion a la base de datos en nuestro archivo .en (archi env de muestra proveido)
 
 ```bash
  DB_CONNECTION=mysql
@@ -56,11 +56,11 @@ Inicializar
   php artisan serve
 ```
 
-## Base de Datos : idesatest
+## Base de Datos : tedepsatest
 
-Para el proyecto se proporciona un dump.SQL para crear la base de datos inicial con el nombre "idesatest.sql" dentro de la carpeta Recursos
+Para el proyecto se proporciona un dump.SQL para crear la base de datos inicial
 
 ## Coleccion POSTMAN
 
-Se proporciona coleccion postman con ejemplos de las peticiones a la API dentro de la carpeta Recursos
+Se proporciona coleccion postman con ejemplos de las peticiones a la API 
 
